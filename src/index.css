@@ -22,3 +22,66 @@ body{
   align-items: center;
   flex-direction: column;
 }
+
+/* TOGGLE BUTTON */
+
+.my-toggle{
+  appearance: none;
+  background-color: #A62AF2;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.my-toggle::before{
+  content: "";
+  position: absolute;
+  height: 30px;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-toggle:checked::before{
+  content: "";
+  left: calc(100% - 5px - 30px);
+}
+
+/* TOGGLE BUTTON END */
+
+section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 95%;
+  max-width: 800px;
+  margin-top: 30px;
+}
+
+.question{}
+
+.answers{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.answers>button{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.eyebrow{}
